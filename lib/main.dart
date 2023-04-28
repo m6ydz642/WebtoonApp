@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:webtoonapp/widgets/currency_card.dart';
-import 'package:webtoonapp/widgets/custombutton.dart';
+
+import 'widgets/currency_card.dart';
+import 'widgets/custombutton.dart';
 
 void main() {
   runApp(MyApp());
