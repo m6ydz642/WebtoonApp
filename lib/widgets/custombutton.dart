@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/* 위젯을 재 사용 한다 */
+/* 버튼 위젯을 재 사용 한다 */
 class CustomButton extends StatelessWidget {
   final String text;
   final Color bgColor;

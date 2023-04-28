@@ -4,20 +4,25 @@ import 'package:flutter/material.dart';
 class CurrencyCard extends StatelessWidget {
   final String name, code, amount;
   final IconData icon;
+  final bool isInverted;
+
+  final _blackColor = const Color(0xFF1F2123);
 
   const CurrencyCard(
       {super.key,
       required this.name,
       required this.code,
       required this.amount,
-      required this.icon});
+      required this.icon,
+      required this.isInverted});
 
   @override
   Widget build(Object context) {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-          color: Color(0xFF1F2123), borderRadius: BorderRadius.circular(25)),
+          color: isInverted ? Colors.white : _blackColor,
+          borderRadius: BorderRadius.circular(25)),
       child: Padding(
         padding: const EdgeInsets.all(30),
         child: Row(
@@ -28,7 +33,9 @@ class CurrencyCard extends StatelessWidget {
               children: [
                 Text(
                   name,
-                  style: TextStyle(color: Colors.white, fontSize: 32),
+                  style: TextStyle(
+                      color: isInverted ? _blackColor : Colors.white,
+                      fontSize: 32),
                 ),
                 SizedBox(
                   height: 10,
@@ -37,7 +44,9 @@ class CurrencyCard extends StatelessWidget {
                   children: [
                     Text(
                       amount,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(
+                          color: isInverted ? _blackColor : Colors.white,
+                          fontSize: 20),
                     ),
                     SizedBox(
                       width: 5,
@@ -58,7 +67,7 @@ class CurrencyCard extends StatelessWidget {
                 offset: Offset(8, 10),
                 child: Icon(
                   icon,
-                  color: Colors.white,
+                  color: isInverted ? _blackColor : Colors.white,
                   size: 88,
                 ),
               ),
