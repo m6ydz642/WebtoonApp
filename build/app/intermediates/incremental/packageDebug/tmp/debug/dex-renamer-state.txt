@@ -1,0 +1,4 @@
+#Sat Apr 29 07:20:42 KST 2023
+base.0=/Users/m6ydz642/StudioProjects/webtoonApp/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
